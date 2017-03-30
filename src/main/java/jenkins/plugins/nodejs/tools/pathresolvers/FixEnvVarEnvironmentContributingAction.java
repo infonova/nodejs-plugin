@@ -31,6 +31,10 @@ public class FixEnvVarEnvironmentContributingAction implements EnvironmentContri
 
     @Override
     public void buildEnvVars(AbstractBuild<?, ?> build, EnvVars env) {
+        if (installation == null) {
+            return;
+        }
+
         String home = installation.getHome();
         // check if not already added
         if (env.get("PATH") == null || !env.get("PATH").contains(home)) {
