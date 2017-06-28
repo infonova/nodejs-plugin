@@ -7,7 +7,7 @@
     </parent>
 
     <artifactId>nodejs</artifactId>
-    <version>1.2.3-SNAPSHOT</version>
+    <version>1.2.2-INFONOVA-1-SNAPSHOT</version>
     <name>NodeJS Plugin</name>
     <description>Executes NodeJS script as a build step.</description>
     <url>http://wiki.jenkins-ci.org/display/JENKINS/NodeJS+Plugin</url>
@@ -148,11 +148,25 @@
     </reporting>
 
     <scm>
-        <connection>scm:git:git://github.com/jenkinsci/nodejs-plugin.git</connection>
-        <developerConnection>scm:git:git@github.com:jenkinsci/nodejs-plugin.git</developerConnection>
-        <url>https://github.com/jenkinsci/nodejs-plugin</url>
+        <connection>scm:git:https://github.com/infonova/nodejs-plugin.git</connection>
+        <developerConnection>scm:git:https://github.com/infonova/nodejs-plugin.git</developerConnection>
+        <url>https://github.com/infonova/nodejs-plugin</url>
         <tag>HEAD</tag>
     </scm>
+
+    <distributionManagement>
+        <repository>
+            <id>nexus-infonova</id>
+            <name>Nexus at Infonova</name>
+            <url>http://grzmvn01.infonova.at:8082/nexus/content/repositories/ise-releases/</url>
+        </repository>
+        <snapshotRepository>
+            <id>nexus-infonova</id>
+            <name>Nexus at Infonova</name>
+            <url>http://grzmvn01.infonova.at:8082/nexus/content/repositories/ise-snapshots/</url>
+            <uniqueVersion>false</uniqueVersion>
+        </snapshotRepository>
+    </distributionManagement>
 
     <pluginRepositories>
         <pluginRepository>
